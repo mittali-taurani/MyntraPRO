@@ -1,0 +1,147 @@
+.burger__main {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.2em;
+  right: 0.5em;
+  z-index: 15;
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+}
+
+.open {
+  position: fixed;
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+}
+
+.close {
+  position: absolute;
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--black);
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+
+    &:nth-child(1) {
+      transform: rotate(0);
+    }
+
+    &:nth-child(2) {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+}
+
+.rightnav__div {
+  display: none;
+
+  .rightnav__item {
+    border-bottom: 1px solid;
+    padding: 0.5em;
+    a {
+      color: var(--black);
+    }
+
+    &:nth-child(1) {
+      background-color: var(--black);
+      color: var(--white);
+      min-height: 2em;
+
+      h4 {
+        @media screen and (max-width: 560px) {
+          max-width: 3.5em;
+        }
+      }
+    }
+
+    &:nth-last-child(1) {
+      margin-top: auto;
+      border: none;
+
+      .login__btn {
+        @media screen and (max-width: 560px) {
+          font-size: 1.2rem;
+        }
+
+        svg {
+          margin-right: 0.5em;
+
+          @media screen and (max-width: 560px) {
+            width: 1.5em;
+            height: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.navOpen {
+  @media (max-width: 768px) {
+    transform: translateX(0);
+    z-index: 2;
+  }
+}
+
+.navClose {
+  @media (max-width: 768px) {
+    transform: translateX(100%);
+  }
+}

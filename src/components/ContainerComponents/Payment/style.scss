@@ -1,0 +1,53 @@
+.payment__content {
+  font-size: 1.2rem;
+  margin-top: 2em;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  * {
+    margin-bottom: 1em;
+  }
+  .selected-address {
+    border: 1px solid var(--grey);
+    padding: 0.5em;
+    align-items: flex-start;
+    width: 25%;
+    max-width: 25%;
+    overflow: auto;
+    margin-bottom: 3em;
+
+    @media (max-width: 600px) {
+      max-width: 80%;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 60%;
+      width: 100%;
+    }
+
+    .address-details {
+      align-items: flex-start;
+      * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .payment__main {
+    .payment__form {
+      margin-bottom: 2em;
+
+      .payment-method__item {
+        justify-content: flex-start;
+        align-items: baseline;
+
+        input[type="radio"] {
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}

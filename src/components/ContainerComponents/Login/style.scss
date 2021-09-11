@@ -1,0 +1,72 @@
+.login-form {
+  background-color: var(--white);
+  font-size: 2rem;
+  border-radius: 10px;
+  max-width: 30%;
+  min-width: 30%;
+
+  @media (max-width: 768px) {
+    max-width: unset;
+  }
+
+  .close-icon-div {
+    text-align: right;
+
+    .close-icon {
+      cursor: pointer;
+      margin-right: 0.1em;
+    }
+  }
+
+  .login-form-header {
+    font-weight: bold;
+    margin: 0 1rem 0;
+    font-size: 2rem;
+    text-align: center;
+    word-break: break-word
+  }
+
+  .modal-content {
+    padding: 0 1rem;
+
+    .login-form-sub-heading{
+      font-size: 1.3rem;
+      margin: 1em 0;
+    }
+
+    .googleBtn,
+    .facebookBtn {
+      padding: 0.5rem;
+      background-color: var(--black);
+      color: var(--white);
+      width: 100%;
+      margin: 0.8rem 0;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: 5px 5px 5px #777;
+      // box-shadow: 5px 10px 5px -6px #777;
+      border-radius: 5px;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      span {
+        align-self: center;
+      }
+    }
+
+    .social-icon {
+      margin-right: 0.5rem;
+      width: 2em;
+      height: 2em;
+    }
+
+    .error__element{
+      color: var(--light-red);
+      font-size: 1rem;
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.product-details-main {
+  width: 40%;
+  padding: 0 1em;
+  align-items: flex-start;
+
+  *{
+      margin-bottom: 1em;
+  }
+
+  .margin-bottom {
+    margin-bottom: 0.2em;
+  }
+
+  .product-details-title {
+    width: 100%;
+    justify-content: space-between;
+    
+    *{
+      margin: 0;
+    }
+  }
+
+  .product-details-heading {
+    font-weight: bold;
+  }
+
+  .product-details-quantity {
+    width: 50%;
+
+    @media (max-width: 560px) {
+      width: 100%;
+    }
+
+    .counter-main{
+      margin-bottom: 0;
+    }
+  }
+
+  .login-form{
+    margin-bottom: 0;
+    *{
+      margin-bottom: 0;
+    }
+  }
+
+  .addCartBtn {
+    align-items: flex-end;
+
+    &:disabled {
+      background-color: var(--grey);
+      color: var(--black);
+      box-shadow: none;
+      border: 1px solid var(--black);
+      cursor: not-allowed;
+    }
+
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+      margin: 0 0.5em 0 0;
+    }
+
+    h4{
+      margin: 0;
+    }
+
+  }
+
+  .login-alert__div{
+    align-items: stretch;
+
+    @media (min-width: 560px) and (max-width: 768px) {
+      width: 80%;
+      align-self: center;
+    }
+
+    *{
+      margin-bottom: 0;
+    }
+
+    .addToCart-login-msg{
+      color: var(--light-red);
+      font-size: 1rem;
+      margin-right: 0.2em;
+    }  
+
+    .login-btn{
+      padding: 0;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+}

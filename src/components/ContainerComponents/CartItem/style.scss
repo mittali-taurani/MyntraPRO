@@ -1,0 +1,120 @@
+.cart-item {
+  border: 1px solid var(--gainsboro);
+  margin: 0 0 0.5em;
+  padding: 1em;
+  flex: 1 0 auto;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cart-item__img {
+    width: 15%;
+    height: 15%;
+    border: 1px solid var(--cool-grey);
+    align-self: flex-start;
+    margin: 0 2em 0 0;
+  }
+
+  .cart-item__main {
+    align-items: stretch;
+    width: 60%;
+    margin-right: 5rem;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      width: auto;
+      margin-right: 2rem;
+      flex-grow: 1;
+    }
+
+    * {
+      margin-bottom: 0.5em;
+    }
+
+    div {
+      &:nth-last-child(1) {
+        *{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .cart-item__price {
+      justify-content: flex-start;
+      margin: 0;
+
+      p {
+        margin-right: 0.5em;
+      }
+    }
+
+    .cart-item-quantity__div {
+      // @media (max-width: 768px) {
+      margin-bottom: 0;
+      // }
+      .cart-item__quantity {
+        width: 30%;
+        margin: 0.5em 0 0;
+
+        * {
+          margin-bottom: 0;
+          box-shadow: none;
+        }
+
+        @media (max-width: 560px) {
+          width: 100%;
+        }
+
+        .counter-main {
+          width: 100%;
+        }
+
+        .counter_button,
+        .counter-value {
+          margin: 0;
+        }
+      }
+    }
+    
+  }
+
+  .cart-item__sidebar {
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      min-width: 20%;
+    }
+
+    .cart-item__removeBtn {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 0;
+    }
+  }
+}
+
+.cart-item__total{
+  width: 10em;
+  justify-content: space-between;
+
+  .cart-item-total__div{
+    align-self: baseline;
+    width: 40%;
+  }
+
+  .cart-item-total__h4{
+    width: auto;
+  }
+
+  @media (max-width: 560px){
+    flex-direction: column;
+    align-items: flex-start;
+    width: 5em;
+  }
+}

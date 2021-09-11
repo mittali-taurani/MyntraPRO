@@ -1,0 +1,110 @@
+.checkout-shipping__main {
+  font-size: 1rem;
+  padding: 1em;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0.5em 0 0 0.5em;
+  }
+
+  * {
+    margin-bottom: 1em;
+  }
+
+  .checkout-shipping__content {
+    border-left: 2px solid var(--grey);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    .checkout-shipping__address-list {
+      margin-left: 1em;
+
+      .checkout-shipping__form {
+        align-items: stretch;
+        // width: 100%;
+        // min-width: 50%;
+        // max-width: 50%;
+
+        @media (max-width: 560px) {
+          width: 100%;
+        }
+
+        .address-list__item {
+          justify-content: stretch;
+
+          .address-details {
+            margin-left: 0.5em;
+            border: 1px solid var(--grey);
+            padding: 0.5em;
+            align-items: flex-start;
+            width: 80%;
+            max-width: 80%;
+            overflow: auto;
+
+            .address-details__subdiv {
+              align-items: flex-start;
+              * {
+                margin-bottom: 0;
+              }
+
+              &:last-of-type{
+                margin-bottom: 0;
+              }
+            }
+
+            .address-item__remove {
+              color: var(--light-red);
+              align-self: flex-end;
+              width: 1.5em;
+              height: 1.5em;
+              cursor: pointer;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    width: auto;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .add-address-btn {
+    font-size: 1.2rem;
+    padding: 0.2em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+
+    * {
+      margin: 0;
+    }
+
+    svg {
+      margin-right: 0.2em;
+    }
+  }
+
+  .proceed-btn {
+    align-self: center;
+
+    button {
+      padding: 0.5em;
+
+      &:disabled {
+        background-color: var(--grey);
+        color: var(--black);
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
