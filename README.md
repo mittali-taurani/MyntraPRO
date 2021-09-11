@@ -1,4 +1,5 @@
 # MyntraPRO
+An online shopping store.
 
 # Run Project
 
